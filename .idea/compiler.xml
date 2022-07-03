@@ -7,11 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="consumer" />
         <module name="provider-nacos" />
         <module name="gateway" />
         <module name="consumer-fegin" />
-        <module name="consumer-nacos-fegin" />
         <module name="sentienl-service" />
         <module name="provider" />
         <module name="consumer-nacos" />
@@ -19,10 +17,15 @@
         <module name="provider-hystrix" />
         <module name="eureka" />
         <module name="config" />
+        <module name="consumer" />
         <module name="consumer-hystrix-dashboard" />
         <module name="common" />
+        <module name="consumer-nacos-fegin" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="nacos-gateway" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
