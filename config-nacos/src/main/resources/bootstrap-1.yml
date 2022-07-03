@@ -1,0 +1,53 @@
+server:
+  port: 9402
+  servlet:
+    context-path: /${spring.application.name}
+logging:
+  file:
+    name: log/${spring.application.name}.log
+nacos:
+  config:
+    namespace: f21538be-0087-4593-8635-87a143988ea4
+    server-addr: 192.168.4.4:8848
+spring:
+  application:
+    name: agcim-viewer-rest
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        group: ${spring.cloud.nacos.config.group}
+        namespace: ${spring.cloud.nacos.config.namespace}
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+      config:
+        group: ${spring.profiles.active}
+        namespace: ${nacos.config.namespace}
+        server-addr: ${nacos.config.server-addr}
+        shared-configs:
+          #路由地址
+          - data-id: agcim-rest-url-${spring.profiles.active}.yaml
+            group: ${spring.cloud.nacos.config.group}
+            refresh: true
+          #接入agcloud所需配置
+          - data-id: agcim-base-${spring.profiles.active}.yaml
+            group: ${spring.cloud.nacos.config.group}
+            refresh: true
+          - data-id: common-redis-${spring.profiles.active}.yaml
+            group: ${spring.cloud.nacos.config.group}
+            refresh: true
+          #数据库配置
+          - data-id: common-datasource-${spring.profiles.active}.yaml
+            group: ${spring.cloud.nacos.config.group}
+            refresh: true
+          - data-id: common-mybatis-${spring.profiles.active}.yaml
+            group: ${spring.cloud.nacos.config.group}
+            refresh: true
+          #动态配置
+          - data-id: agcim-viewer-${spring.profiles.active}.yaml
+            group: ${spring.cloud.nacos.config.group}
+            refresh: true
+          # apisix 配置
+          - data-id: common-apisix-${spring.profiles.active}.yaml
+            group: ${spring.cloud.nacos.config.group}
+            refresh: true
