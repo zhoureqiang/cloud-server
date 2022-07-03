@@ -11,6 +11,8 @@
     <file url="file://$PROJECT_DIR$/consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos-fegin-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/provider-hystrix/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/provider-nacos/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/provider/src/main/java" charset="UTF-8" />

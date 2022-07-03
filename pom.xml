@@ -19,6 +19,8 @@
         <module>config-nacos</module>
         <module>sentienl-service</module>
         <module>consumer-nacos-fegin</module>
+        <module>nacos-fegin-consumer</module>
+        <module>nacos-gateway</module>
     </modules>
 
     <parent>
