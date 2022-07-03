@@ -10,10 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.cloud</groupId>
-    <artifactId>provider-sentienl</artifactId>
+    <artifactId>sentienl-service</artifactId>
     <version>${project.version}</version>
-    <name>provider-sentienl</name>
-    <description>provider-sentienl</description>
+    <name>sentienl-service</name>
+    <description>sentienl-service</description>
 
     <properties>
         <java.version>1.8</java.version>
